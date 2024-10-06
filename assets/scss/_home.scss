@@ -1,0 +1,39 @@
+// BANNER
+
+.half-banner {
+  .banner-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .banner-slider {
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .banner-content {
+    padding: 0 40px;
+    @include flex(center, unset, 10px);
+    flex-direction: column;
+    background: $pastel-yellow;
+    .title {
+      font-family: $font-cute;
+      font-size: 60px;
+    }
+    .desc {
+      font-weight: $fw-l;
+      width: 80%;
+    }
+    .button-color {
+      margin-top: 30px;
+    }
+  }
+}
