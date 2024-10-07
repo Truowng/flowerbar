@@ -71,6 +71,50 @@ button {
   text-align: center;
 }
 
+.pagi {
+  margin-top: 50px;
+}
+.pagi .pagi-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.pagi .pagi-button {
+  min-width: 20px;
+  padding: 5px 8px;
+  transition: all ease 0.3s;
+  border-radius: 8px;
+}
+.pagi .pagi-button img {
+  width: 15px;
+}
+.pagi .pagi-button:hover {
+  background: #f7f69b;
+  transform: scale(1.1);
+}
+.pagi .pagi-page,
+.pagi .page-etc {
+  border-radius: 8px;
+  padding: 5px 10px 3px;
+  text-align: center;
+  transition: all ease 0.3s;
+  font-family: "Cute Dino";
+}
+.pagi .pagi-page.active,
+.pagi .page-etc.active {
+  background-color: #96c3ff;
+}
+.pagi .pagi-page.active:hover,
+.pagi .page-etc.active:hover {
+  background-color: #96c3ff;
+}
+.pagi .pagi-page:hover,
+.pagi .page-etc:hover {
+  background: #f7f69b;
+  transform: scale(1.1);
+}
+
 header {
   position: relative;
   z-index: 10;
@@ -196,6 +240,37 @@ header .logo .logo-image {
   text-align: center;
   font-size: 14px;
   margin-top: 5px;
+}
+
+.product-tab {
+  margin-top: 50px;
+}
+.product-tab .product-tab-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.product-tab .product-tab-item.active a {
+  background: #eeb8d0;
+}
+.product-tab .product-tab-item.active a:hover {
+  background: #eeb8d0;
+}
+.product-tab .product-tab-item a {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 18px 7px;
+  font-family: "Cute Dino";
+  border-radius: 100px;
+  font-size: 16px;
+  transition: all ease 0.3s;
+}
+.product-tab .product-tab-item a:hover {
+  background: #f7f69b;
+  transform: scale(1.1);
 }
 
 .video {
@@ -340,6 +415,9 @@ footer .blockquote {
   .product.product-border .product-item .image {
     border-width: 8px;
   }
+  .product-tab .product-tab-list {
+    gap: 10px;
+  }
   .video {
     padding: 20px 12px;
   }
@@ -419,5 +497,49 @@ footer .blockquote {
     width: 80%;
     margin: 0 auto;
     text-align: center;
+  }
+}
+.full-banner .banner-wrapper {
+  position: relative;
+}
+.full-banner .banner-slider {
+  width: 100%;
+}
+.full-banner .banner-image {
+  aspect-ratio: 4/2;
+  overflow: hidden;
+}
+.full-banner .banner-image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.full-banner .banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: unset;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.2);
+}
+.full-banner .banner-content .title {
+  font-family: "Cute Dino";
+  color: #fff;
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 991px) {
+  .full-banner .banner-content .title {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .full-banner .banner-content .title {
+    font-size: 25px;
   }
 }

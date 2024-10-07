@@ -30,3 +30,15 @@ if (document.querySelector(".half-banner .banner-slider")) {
     effect: "fade",
   });
 }
+
+if (document.querySelector(".full-banner .banner-slider")) {
+  const fullBannerSlider = new Swiper(".full-banner .banner-slider .swiper", {
+    direction: "horizontal",
+    speed: 1000,
+    autoplay: {
+      delay: 4000,
+    },
+    loop: true,
+    effect: "fade",
+  });
+}

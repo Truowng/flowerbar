@@ -65,6 +65,44 @@ button {
   }
 }
 
+.pagi {
+  margin-top: 50px;
+  .pagi-wrapper {
+    @include flex(center, center, 10px);
+  }
+  .pagi-button {
+    min-width: 20px;
+    padding: 5px 8px;
+    transition: all ease 0.3s;
+    border-radius: 8px;
+    img {
+      width: 15px;
+    }
+    &:hover {
+      background: $pastel-yellow;
+      transform: scale(1.1);
+    }
+  }
+  .pagi-page,
+  .page-etc {
+    &.active {
+      background-color: $baby-blue-eyes;
+      &:hover {
+        background-color: $baby-blue-eyes;
+      }
+    }
+    &:hover {
+      background: $pastel-yellow;
+      transform: scale(1.1);
+    }
+    border-radius: 8px;
+    padding: 5px 10px 3px;
+    text-align: center;
+    transition: all ease 0.3s;
+    font-family: $font-cute;
+  }
+}
+
 // HEADER
 header {
   position: relative;
@@ -201,6 +239,38 @@ header {
         text-align: center;
         font-size: 14px;
         margin-top: 5px;
+      }
+    }
+  }
+}
+
+.product-tab {
+  margin-top: 50px;
+  .product-tab-list {
+    @include flex(center, center, 40px);
+    flex-wrap: wrap;
+  }
+
+  .product-tab-item {
+    &.active {
+      a {
+        background: $cameo-pink;
+        &:hover {
+          background: $cameo-pink;
+        }
+      }
+    }
+    a {
+      display: inline-block;
+      width: fit-content;
+      padding: 10px 18px 7px;
+      font-family: $font-cute;
+      border-radius: 100px;
+      font-size: 16px;
+      transition: all ease 0.3s;
+      &:hover {
+        background: $pastel-yellow;
+        transform: scale(1.1);
       }
     }
   }
@@ -379,6 +449,12 @@ footer {
           border-width: 8px;
         }
       }
+    }
+  }
+
+  .product-tab {
+    .product-tab-list {
+      gap: 10px;
     }
   }
 
