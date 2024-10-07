@@ -69,6 +69,13 @@ button {
 header {
   position: relative;
   z-index: 10;
+  .logo {
+    @include flex(center, center, unset);
+    padding: 30px 0;
+    .logo-image {
+      width: 250px;
+    }
+  }
 }
 .topbar {
   background: $cameo-pink;
@@ -85,14 +92,6 @@ header {
   }
   .header-nav {
     width: 100%;
-  }
-}
-
-.logo {
-  @include flex(center, center, unset);
-  padding: 30px 0;
-  .logo-image {
-    width: 250px;
   }
 }
 
@@ -258,12 +257,15 @@ footer {
   }
   .logo {
     max-width: 400px;
+    display: block;
+    margin-bottom: 30px;
   }
   .info-item {
     @include flex(unset, center, 10px);
     margin-bottom: 15px;
     .icon {
       width: 25px;
+      min-width: 25px;
     }
     .text {
       font-weight: $fw-l;
@@ -296,5 +298,101 @@ footer {
   .blockquote {
     font-family: $font-cute;
     font-size: 18px;
+  }
+}
+
+// RESPONSIVE
+
+@include tablet {
+}
+
+@include landscape-phone {
+  .heading-block {
+    .title {
+      font-size: 30px;
+    }
+  }
+  .product,
+  .video,
+  footer {
+    margin-top: 50px;
+  }
+  .product {
+    &.product-large {
+      .product-wrapper {
+        grid-column-gap: 20px;
+      }
+    }
+    &.product-small {
+      .product-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+      }
+    }
+    &.product-border {
+      .product-item {
+        .image {
+          border-width: 10px;
+        }
+      }
+    }
+  }
+
+  .video {
+    padding: 25px;
+    .video-wrapper {
+      border-width: 10px;
+    }
+  }
+
+  footer {
+    .logo {
+      margin: 0 auto 30px;
+      max-width: 300px;
+    }
+    .footer-wrapper {
+      grid-row-gap: 20px;
+      .info-list {
+        grid-area: 1/1/1/5;
+      }
+      .footer-widget {
+        &:nth-child(2) {
+          grid-area: 2/1/2/3;
+        }
+        &:nth-child(3) {
+          grid-area: 2/3/2/5;
+        }
+      }
+      .blockquote {
+        grid-area: 3/1/3/5;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include extra-mobile {
+  .product {
+    &.product-border {
+      .product-item {
+        .image {
+          border-width: 8px;
+        }
+      }
+    }
+  }
+
+  .video {
+    padding: 20px 12px;
+    .video-wrapper {
+      aspect-ratio: 6/4;
+      border-width: 8px;
+    }
+  }
+
+  footer {
+    .logo {
+      max-width: 250px;
+    }
   }
 }
