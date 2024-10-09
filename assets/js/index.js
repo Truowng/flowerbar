@@ -42,3 +42,26 @@ if (document.querySelector(".full-banner .banner-slider")) {
     effect: "fade",
   });
 }
+
+if (document.querySelector(".product-detail .detail-slider .swiper")) {
+  const detailThumb = new Swiper(".product-detail .detail-thumb .swiper", {
+    direction: "horizontal",
+    speed: 1000,
+    slidesPerView: 8,
+    spaceBetween: 5,
+    loop: true,
+  });
+
+  const detailSlider = new Swiper(".product-detail .detail-slider .swiper", {
+    direction: "horizontal",
+    speed: 500,
+    autoplay: {
+      delay: 3000,
+    },
+    loop: true,
+    effect: "fade",
+    thumbs: {
+      swiper: detailThumb,
+    },
+  });
+}

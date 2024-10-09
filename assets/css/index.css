@@ -554,6 +554,178 @@ footer .blockquote {
     font-size: 25px;
   }
 }
+.product-detail {
+  margin-top: 120px;
+}
+.product-detail .product-detail-wrapper {
+  display: flex;
+  justify-content: unset;
+  align-items: start;
+  gap: 40px;
+}
+.product-detail .detail-slider-container {
+  width: 50%;
+}
+.product-detail .detail-slider {
+  width: 100%;
+}
+.product-detail .detail-slider .swiper-slide {
+  height: unset;
+}
+.product-detail .detail-image-item {
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-detail .detail-image-item img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-detail .detail-thumb {
+  width: 100%;
+  margin-top: 5px;
+}
+.product-detail .detail-thumb .swiper-slide {
+  filter: brightness(0.6);
+  transition: all ease 0.3s;
+  cursor: pointer;
+  height: unset;
+}
+.product-detail .detail-thumb .swiper-slide-thumb-active {
+  filter: brightness(1);
+}
+.product-detail .detail-thumb-item {
+  aspect-ratio: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.product-detail .detail-thumb-item img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-detail .detail-info {
+  width: 50%;
+}
+.product-detail .detail-info .title {
+  font-size: 30px;
+  font-family: "Cute Dino";
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  display: block;
+}
+.product-detail .detail-info .price {
+  margin-bottom: 10px;
+}
+.product-detail .detail-info .price .number {
+  font-size: 25px;
+  font-weight: 600;
+  color: #bfa9f6;
+}
+.product-detail .detail-info .size {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.product-detail .detail-info .desc {
+  font-weight: 300;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 20px;
+}
+.product-detail .product-detail-content {
+  margin-top: 80px;
+  padding-top: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.product-detail .product-detail-content .title {
+  font-size: 30px;
+  font-family: "Cute Dino";
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  color: #96c3ff;
+  -webkit-text-stroke: 0.55px black;
+}
+.product-detail .product-detail-content .detail h1,
+.product-detail .product-detail-content .detail h2,
+.product-detail .product-detail-content .detail h3,
+.product-detail .product-detail-content .detail h4,
+.product-detail .product-detail-content .detail h5,
+.product-detail .product-detail-content .detail h6 {
+  font-family: "Cute Dino";
+  margin: 20px 0;
+}
+.product-detail .product-detail-content .detail h1:first-child,
+.product-detail .product-detail-content .detail h2:first-child,
+.product-detail .product-detail-content .detail h3:first-child,
+.product-detail .product-detail-content .detail h4:first-child,
+.product-detail .product-detail-content .detail h5:first-child,
+.product-detail .product-detail-content .detail h6:first-child {
+  margin-top: 0;
+}
+.product-detail .product-detail-content .detail h2 {
+  font-size: 26px;
+}
+.product-detail .product-detail-content .detail h3 {
+  font-size: 24px;
+}
+.product-detail .product-detail-content .detail h4 {
+  font-size: 22px;
+}
+.product-detail .product-detail-content .detail h5 {
+  font-size: 20px;
+}
+.product-detail .product-detail-content .detail h6 {
+  font-size: 18px;
+}
+.product-detail .product-detail-content .detail p,
+.product-detail .product-detail-content .detail li {
+  font-size: 14px;
+  font-weight: 300;
+  color: #000;
+}
+.product-detail .product-detail-content .detail p {
+  margin-bottom: 15px;
+}
+.product-detail .product-detail-content .detail ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+.product-detail .product-detail-content .detail li {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product-detail .product-detail-wrapper {
+    flex-direction: column;
+  }
+  .product-detail .detail-info,
+  .product-detail .detail-slider-container {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .product-detail {
+    margin-top: 80px;
+  }
+  .product-detail .product-detail-content .detail h2 {
+    font-size: 24px;
+  }
+  .product-detail .product-detail-content .detail h3 {
+    font-size: 22px;
+  }
+  .product-detail .product-detail-content .detail h4 {
+    font-size: 20px;
+  }
+  .product-detail .product-detail-content .detail h5 {
+    font-size: 18px;
+  }
+  .product-detail .product-detail-content .detail h6 {
+    font-size: 16px;
+  }
+}
 .policy {
   margin-top: 50px;
 }
